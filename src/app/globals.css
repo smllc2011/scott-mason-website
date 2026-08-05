@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #3eb4c1;
+  --color-accent-hover: #52c3cf;
+  --color-accent-pressed: #2fa0ad;
+  --color-bg-primary: #111111;
+  --color-bg-secondary: #f8f8f7;
+  --color-bg-dark: #161616;
+  --color-bg-card: #1d1d1d;
+  --color-border: #2d2d2d;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #cfcfcf;
+  --color-text-muted: #9a9a9a;
+  --color-text-dark: #1b1b1b;
+  --font-display: var(--font-bebas);
+  --font-body: var(--font-inter);
+  --site-header-height: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  background-color: #000;
+  color: var(--color-text-primary);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+[id] {
+  scroll-margin-top: var(--site-header-height);
+}
+
+@media (min-width: 1024px) {
+  :root,
+  :host {
+    --site-header-height: 88px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+/* Primary CTA */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  background-color: var(--color-accent);
+  color: white;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: background-color 200ms ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.btn-primary:active {
+  background-color: var(--color-accent-pressed);
+  transform: translateY(0);
+}
+
+/* Compact nav CTA */
+.btn-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: var(--color-accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: background-color 200ms ease;
+}
+
+.btn-nav:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.section-label {
+  color: var(--color-accent);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.section-padding {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+
+.container-site {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container-site {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.heading-hero {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: clamp(2rem, 3vw + 0.625rem, 3.375rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.heading-section {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: clamp(2rem, 3vw + 0.5rem, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.card-dark {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.card-dark:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.35);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  opacity: 0;
+  animation: fade-in-up 480ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-in-delay-1 {
+  animation-delay: 90ms;
+}
+
+.animate-in-delay-2 {
+  animation-delay: 180ms;
+}
+
+.animate-in-delay-3 {
+  animation-delay: 270ms;
+}
+
+.animate-in-delay-4 {
+  animation-delay: 360ms;
+}
+
+.animate-in-delay-5 {
+  animation-delay: 450ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-in,
+  .animate-in-delay-1,
+  .animate-in-delay-2,
+  .animate-in-delay-3,
+  .animate-in-delay-4,
+  .animate-in-delay-5 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
