@@ -36,7 +36,7 @@ export default function Speaker() {
         </AnimateIn>
 
         <AnimateIn delay={2} className="mt-10 flex justify-center lg:mt-12">
-          <Link href="/management#contact" className="btn-primary">
+          <Link href="/contact" className="btn-primary">
             BOOK SCOTT TO SPEAK
           </Link>
         </AnimateIn>

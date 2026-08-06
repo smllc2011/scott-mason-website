@@ -1,11 +1,5 @@
 import AnimateIn from "./AnimateIn";
-
-const socialLinks = [
-  { label: "Facebook", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "Amazon", href: "#" },
-  { label: "YouTube", href: "#" },
-];
+import { socialLinks } from "@/data/socialLinks";
 
 export default function About() {
   return (

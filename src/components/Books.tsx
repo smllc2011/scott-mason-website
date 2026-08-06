@@ -62,11 +62,11 @@ export default function Books() {
       }}
     >
       <div className="container-site">
-        <div className="animate-stagger grid items-stretch gap-12 md:grid-cols-2 xl:grid-cols-3 xl:gap-10">
+        <div className="grid items-stretch gap-12 md:grid-cols-2 xl:grid-cols-3 xl:gap-10">
           {books.map((book) => (
             <article
               key={book.title}
-              className="flex h-full flex-col items-center"
+              className="animate-in flex h-full flex-col items-center"
             >
               <BookCover coverSrc={book.coverSrc} coverAlt={book.coverAlt} />
 
