@@ -3,17 +3,13 @@ import MissionPortraitPlaceholder from "./MissionPortraitPlaceholder";
 
 export default function Mission() {
   return (
-    <section className="bg-white py-12 lg:py-16">
-      <div className="container-site grid gap-8 lg:grid-cols-2 lg:items-stretch lg:gap-14 xl:gap-16">
-        <div className="flex max-w-xl flex-col gap-4 sm:gap-5 lg:h-full lg:justify-between lg:gap-0">
-          <p className="section-label">MY MISSION</p>
-
-          <h2 className="heading-section text-[#111111]">
-            TURNING MY STORY INTO SOMEONE ELSE&apos;S HOPE
-          </h2>
+    <section className="bg-white py-6 lg:py-8">
+      <div className="container-site grid gap-6 lg:grid-cols-2 lg:items-center lg:gap-8 xl:gap-10">
+        <div className="flex max-w-xl flex-col gap-3 sm:gap-4">
+          <h2 className="heading-page text-[#111111]">MY MISSION</h2>
 
           <p className="text-[15px] leading-[1.75] text-[#444444] sm:text-[16px]">
-            From a life of crime, prison, and hopelessness to one of purpose,
+            Turning my story into someone else&apos;s hope. From a life of crime, prison, and hopelessness to one of purpose,
             impact, and inspiration. I share my journey to encourage others that
             change is possible.
           </p>

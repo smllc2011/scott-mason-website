@@ -118,6 +118,36 @@ h4 {
   text-transform: uppercase;
 }
 
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 14px 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: white;
+  transition: border-color 200ms ease;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
 .section-padding {
   padding-top: 48px;
   padding-bottom: 48px;
@@ -162,11 +192,18 @@ h4 {
 
 .heading-hero {
   font-family: var(--font-display), system-ui, sans-serif;
-  font-size: clamp(1.75rem, 6vw, 3.375rem);
+  font-size: clamp(1.5rem, 2.8vw + 0.35rem, 3.125rem);
   font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: 0.045em;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  word-spacing: normal;
   text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .heading-hero {
+    font-size: clamp(1.75rem, 2.1vw + 0.5rem, 2.875rem);
+  }
 }
 
 .heading-section {
@@ -176,6 +213,16 @@ h4 {
   line-height: 1;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+}
+
+.heading-page {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: clamp(1.5rem, 2.5vw + 0.5rem, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .card-dark {

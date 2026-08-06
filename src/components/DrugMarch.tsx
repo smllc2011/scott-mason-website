@@ -140,8 +140,7 @@ function ArticleBlock({ article }: { article: DrugMarchArticle }) {
 
       <div className="px-6 py-8 lg:px-10 lg:py-10">
         <header className="border-b border-white/10 pb-6">
-          <p className="section-label">DRUG MARCH</p>
-          <h2 className="mt-3 font-[family-name:var(--font-display)] text-[1.75rem] leading-none tracking-wide text-white uppercase sm:text-[2rem]">
+          <h2 className="font-[family-name:var(--font-display)] text-[1.75rem] leading-none tracking-wide text-white uppercase sm:text-[2rem]">
             {article.title}
           </h2>
           {article.subtitle ? (
@@ -199,10 +198,7 @@ export default function DrugMarch() {
     >
       <div className="container-site">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="section-label">DRUG MARCH</p>
-          <h1 className="heading-section mt-4 text-white">
-            STEPS TOWARD HEALING
-          </h1>
+          <h1 className="heading-page text-white">DRUG MARCH</h1>
           <p className="mt-5 text-[15px] leading-[1.75] text-white/75 sm:text-[16px]">
             Marion, Ohio rallies against addiction — bringing the community
             together to send a message to drug dealers and give hope to

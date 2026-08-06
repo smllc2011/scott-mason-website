@@ -53,7 +53,7 @@ export default function Hero() {
             />
 
             <div className="relative flex min-w-0 flex-col gap-4 sm:gap-5 lg:gap-6">
-              <h1 className="heading-hero animate-in max-w-full text-white">
+              <h1 className="heading-hero animate-in flex w-full max-w-full flex-col gap-1.5 sm:gap-2 text-white lg:max-w-[94%]">
                 <span className="block">THE STORY OF A MAN</span>
                 <span className="block">WHO HAD NO REASON</span>
                 <span className="block">TO LIVE.</span>

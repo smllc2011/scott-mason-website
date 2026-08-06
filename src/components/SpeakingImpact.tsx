@@ -27,7 +27,7 @@ const features = [
 export default function SpeakingImpact() {
   return (
     <section
-      className="relative section-padding"
+      className="relative py-6 lg:py-8"
       style={{
         backgroundColor: "#141414",
         backgroundImage:
@@ -37,28 +37,26 @@ export default function SpeakingImpact() {
       }}
     >
       <div className="container-site">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16 lg:items-start">
-          <div>
-            <p className="section-label">SPEAKING & IMPACT</p>
-            <h2 className="heading-section mt-4 text-white">
-              REAL STORIES. REAL CHANGE.
-            </h2>
-            <p className="mt-5 max-w-md text-[16px] leading-[1.75] text-white/80">
-              Scott Mason speaks to audiences who need to hear that change is
-              possible. From prisons to churches, schools to corporate events —
-              his message resonates with anyone searching for hope.
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-8 xl:gap-10">
+          <div className="flex max-w-md flex-col gap-3 sm:gap-4">
+            <h2 className="heading-page text-white">SPEAKING &amp; IMPACT</h2>
+            <p className="text-[15px] leading-[1.75] text-white/80 sm:text-[16px]">
+              Real stories. Real change. Scott Mason speaks to audiences who need
+              to hear that change is possible. From prisons to churches, schools
+              to corporate events — his message resonates with anyone searching
+              for hope.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3 md:gap-6">
+          <div className="grid gap-5 sm:grid-cols-3 sm:gap-4 lg:gap-5">
             {features.map((feature) => (
               <div key={feature.title} className="flex items-start gap-3">
                 <AssetIcon src={feature.icon} alt={feature.alt} />
-                <div className="min-w-0 pt-1">
+                <div className="min-w-0 pt-0.5">
                   <h3 className="text-[13px] font-bold tracking-[0.04em] text-white uppercase">
                     {feature.title}
                   </h3>
-                  <p className="mt-2 text-[13px] leading-[1.65] text-white/75">
+                  <p className="mt-1.5 text-[13px] leading-[1.6] text-white/75">
                     {feature.description}
                   </p>
                 </div>

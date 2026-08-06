@@ -13,8 +13,8 @@ const navLinks = [
   { label: "SPEAKER", href: "/speaker" },
   { label: "TESTIMONIALS", href: "/testimonials" },
   { label: "DRUG MARCH", href: "/drug-march" },
-  { label: "PHOTO GALLERY", href: "/#gallery" },
-  { label: "MANAGEMENT", href: "/#management" },
+  { label: "PHOTO GALLERY", href: "/photo-gallery" },
+  { label: "MANAGEMENT", href: "/management" },
 ];
 
 const SCROLL_THRESHOLD = 24;
@@ -92,7 +92,7 @@ export default function Header() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-          <Link href="/#contact" className="btn-nav hidden sm:inline-flex">
+          <Link href="/management#contact" className="btn-nav hidden sm:inline-flex">
             CONTACT SCOTT
           </Link>
 
@@ -135,7 +135,7 @@ export default function Header() {
             ))}
             <div className="px-6 py-5">
               <Link
-                href="/#contact"
+                href="/management#contact"
                 className="btn-primary w-full"
                 onClick={() => setMenuOpen(false)}
               >

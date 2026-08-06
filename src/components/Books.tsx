@@ -64,10 +64,7 @@ export default function Books() {
     >
       <div className="container-site">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="section-label">SCOTT&apos;S BOOKS</p>
-          <h1 className="heading-section mt-4 text-white">
-            REAL STORIES. REAL TRANSFORMATION.
-          </h1>
+          <h1 className="heading-page text-white">SCOTT&apos;S BOOKS</h1>
           <p className="mt-5 text-[15px] leading-[1.75] text-white/75 sm:text-[16px]">
             Raw, honest accounts of addiction, prison, and the hope found on
             the other side—written to inspire anyone who needs proof that change

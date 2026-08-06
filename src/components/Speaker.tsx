@@ -40,10 +40,7 @@ export default function Speaker() {
     >
       <div className="container-site">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="section-label">SPEAKER</p>
-          <h1 className="heading-section mt-4 text-white">
-            REAL STORIES. REAL CHANGE.
-          </h1>
+          <h1 className="heading-page text-white">SPEAKER</h1>
         </div>
 
         <div className="mx-auto mt-10 max-w-4xl shadow-[0_24px_48px_rgba(0,0,0,0.45)] lg:mt-12">
@@ -82,7 +79,7 @@ export default function Speaker() {
         </div>
 
         <div className="mt-14 flex justify-center lg:mt-16">
-          <Link href="/#contact" className="btn-primary">
+          <Link href="/management#contact" className="btn-primary">
             BOOK SCOTT TO SPEAK
           </Link>
         </div>

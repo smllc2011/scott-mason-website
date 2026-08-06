@@ -5,7 +5,7 @@ const AVATAR_SRC = "/images/scott-avatar.png";
 export default function MissionPortraitPlaceholder() {
   return (
     <div
-      className="relative flex w-full items-center justify-center overflow-hidden bg-black aspect-[3/2]"
+      className="relative flex h-[168px] w-full items-center justify-center overflow-hidden bg-black sm:h-[188px] lg:h-[208px]"
       aria-label="Scott Mason photo placeholder"
       role="img"
     >

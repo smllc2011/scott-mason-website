@@ -138,10 +138,7 @@ export default function Testimonials() {
     >
       <div className="container-site">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="section-label">TESTIMONIALS</p>
-          <h1 className="heading-section mt-4 text-white">
-            WHAT PEOPLE ARE SAYING
-          </h1>
+          <h1 className="heading-page text-white">TESTIMONIALS</h1>
           <p className="mt-5 text-[15px] leading-[1.75] text-white/75 sm:text-[16px]">
             From educators to criminal justice professionals, Scott&apos;s story
             and message leave a lasting impact on every audience.
