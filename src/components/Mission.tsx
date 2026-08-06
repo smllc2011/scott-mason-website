@@ -3,7 +3,7 @@ import MissionPortraitPlaceholder from "./MissionPortraitPlaceholder";
 
 export default function Mission() {
   return (
-    <section id="about" className="bg-white py-12 lg:py-16">
+    <section className="bg-white py-12 lg:py-16">
       <div className="container-site grid gap-8 lg:grid-cols-2 lg:items-stretch lg:gap-14 xl:gap-16">
         <div className="flex max-w-xl flex-col gap-4 sm:gap-5 lg:h-full lg:justify-between lg:gap-0">
           <p className="section-label">MY MISSION</p>
@@ -18,7 +18,7 @@ export default function Mission() {
             change is possible.
           </p>
 
-          <Link href="#about" className="btn-primary w-fit">
+          <Link href="/about" className="btn-primary w-fit">
             LEARN MORE ABOUT SCOTT
           </Link>
         </div>

@@ -1,23 +1,33 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 
 const navLinks = [
-  { label: "HOME", href: "/", active: true },
-  { label: "ABOUT", href: "#about" },
-  { label: "SCOTT'S BOOKS", href: "#books" },
-  { label: "SPEAKER", href: "#speaker" },
-  { label: "TESTIMONIALS", href: "#testimonials" },
-  { label: "DRUG MARCH", href: "#drug-march" },
-  { label: "PHOTO GALLERY", href: "#gallery" },
-  { label: "MANAGEMENT", href: "#management" },
+  { label: "HOME", href: "/" },
+  { label: "ABOUT", href: "/about" },
+  { label: "SCOTT'S BOOKS", href: "/books" },
+  { label: "SPEAKER", href: "/speaker" },
+  { label: "TESTIMONIALS", href: "/testimonials" },
+  { label: "DRUG MARCH", href: "/drug-march" },
+  { label: "PHOTO GALLERY", href: "/#gallery" },
+  { label: "MANAGEMENT", href: "/#management" },
 ];
 
 const SCROLL_THRESHOLD = 24;
 
+function isNavLinkActive(pathname: string, href: string) {
+  if (href === "/") {
+    return pathname === "/";
+  }
+
+  return pathname === href;
+}
+
 export default function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -52,7 +62,9 @@ export default function Header() {
               key={link.label}
               href={link.href}
               className={`whitespace-nowrap text-[10px] font-semibold tracking-[0.12em] uppercase transition-colors hover:text-accent xl:text-[11px] ${
-                link.active ? "text-accent" : "text-white"
+                isNavLinkActive(pathname, link.href)
+                  ? "text-accent"
+                  : "text-white"
               }`}
             >
               {link.label}
@@ -60,7 +72,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <Link href="#contact" className="btn-nav shrink-0">
+        <Link href="/#contact" className="btn-nav shrink-0">
           CONTACT SCOTT
         </Link>
       </div>

@@ -27,7 +27,6 @@ const features = [
 export default function SpeakingImpact() {
   return (
     <section
-      id="speaker"
       className="relative section-padding"
       style={{
         backgroundColor: "#141414",
