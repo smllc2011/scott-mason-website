@@ -13,7 +13,7 @@ export default function Logo({ className = "" }: { className?: string }) {
       height={236}
       priority
       unoptimized
-      className={`h-16 w-auto sm:h-[4.25rem] lg:h-20 ${className}`}
+      className={`h-12 w-auto sm:h-16 lg:h-20 ${className}`}
     />
   );
 }

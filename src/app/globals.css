@@ -15,24 +15,39 @@
   --color-text-dark: #1b1b1b;
   --font-display: var(--font-bebas);
   --font-body: var(--font-inter);
-  --site-header-height: 80px;
+  --site-header-height: 72px;
 }
 
 html {
   scroll-behavior: smooth;
   background-color: #000;
+  overflow-x: clip;
 }
 
 body {
   font-family: var(--font-body), system-ui, sans-serif;
   background-color: #000;
   color: var(--color-text-primary);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.7;
+  overflow-x: clip;
+}
+
+@media (min-width: 640px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 [id] {
   scroll-margin-top: var(--site-header-height);
+}
+
+@media (min-width: 768px) {
+  :root,
+  :host {
+    --site-header-height: 80px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -104,8 +119,15 @@ h4 {
 }
 
 .section-padding {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -120,8 +142,15 @@ h4 {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-site {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -133,7 +162,7 @@ h4 {
 
 .heading-hero {
   font-family: var(--font-display), system-ui, sans-serif;
-  font-size: clamp(2rem, 3vw + 0.625rem, 3.375rem);
+  font-size: clamp(1.75rem, 6vw, 3.375rem);
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: 0.045em;

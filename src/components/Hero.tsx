@@ -45,24 +45,18 @@ export default function Hero() {
       </div>
 
       <div className="container-site relative grid items-center gap-5 pb-4 pt-[calc(var(--site-header-height)+1rem)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-10 lg:pb-5 lg:pt-[calc(var(--site-header-height)+1.25rem)] xl:gap-x-12">
-        <div className="flex flex-col">
-          <div className="relative inline-block max-w-full align-top">
+        <div className="min-w-0">
+          <div className="relative max-w-full">
             <div
               className="pointer-events-none absolute -inset-x-5 -inset-y-5 bg-gradient-to-r from-black/50 via-black/35 to-transparent sm:-inset-x-8 sm:-inset-y-6 lg:-inset-x-10"
               aria-hidden="true"
             />
 
-            <div className="relative flex w-0 min-w-full flex-col gap-4 sm:gap-5 lg:gap-6">
-              <h1 className="heading-hero animate-in inline-grid text-white [grid-template-columns:max-content]">
-                <span className="col-start-1 row-start-1 text-justify whitespace-nowrap">
-                  THE STORY OF A MAN
-                </span>
-                <span className="col-start-1 row-start-2 whitespace-nowrap">
-                  WHO HAD NO REASON
-                </span>
-                <span className="col-start-1 row-start-3 whitespace-nowrap">
-                  TO LIVE.
-                </span>
+            <div className="relative flex min-w-0 flex-col gap-4 sm:gap-5 lg:gap-6">
+              <h1 className="heading-hero animate-in max-w-full text-white">
+                <span className="block">THE STORY OF A MAN</span>
+                <span className="block">WHO HAD NO REASON</span>
+                <span className="block">TO LIVE.</span>
               </h1>
 
               <div
@@ -72,29 +66,26 @@ export default function Hero() {
 
               <p className="animate-in animate-in-delay-2 max-w-xl text-left text-[15px] font-normal leading-[1.6] text-white/90 lg:text-[16px]">
                 They say I have to get your attention right from jump or
-                <br />
                 you&apos;ll move on to something else, and I can&apos;t have
-                that.
-                <br />
-                So here you go.
+                that. So here you go.
               </p>
 
-              <div className="animate-in animate-in-delay-3 flex flex-wrap items-center gap-x-4 gap-y-4 sm:gap-x-5 lg:gap-x-6">
+              <div className="animate-in animate-in-delay-3 grid gap-4 sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:gap-x-6 lg:gap-y-4">
                 {stats.map((stat) => (
                   <div
                     key={stat.title}
-                    className="flex shrink-0 items-center gap-2.5 sm:gap-3"
+                    className="flex min-w-0 items-center gap-2.5 sm:gap-3"
                   >
                     <AssetIcon
                       src={stat.icon}
                       alt={stat.alt}
                       className={stat.iconClassName}
                     />
-                    <div className="shrink-0">
-                      <p className="whitespace-nowrap text-[12px] font-bold leading-tight tracking-[0.05em] text-white uppercase sm:text-[13px]">
+                    <div className="min-w-0">
+                      <p className="text-[12px] font-bold leading-tight tracking-[0.05em] text-white uppercase sm:text-[13px]">
                         {stat.title}
                       </p>
-                      <p className="mt-0.5 whitespace-nowrap text-[12px] leading-snug text-white/60 sm:text-[13px]">
+                      <p className="mt-0.5 text-[12px] leading-snug text-white/60 sm:text-[13px]">
                         {stat.subtitle}
                       </p>
                     </div>
@@ -102,7 +93,7 @@ export default function Hero() {
                 ))}
               </div>
 
-              <p className="animate-in animate-in-delay-4 text-left text-[11px] leading-snug tracking-[0.02em] text-white/45 sm:text-[12px]">
+              <p className="animate-in animate-in-delay-4 max-w-xl text-left text-[11px] leading-relaxed tracking-[0.02em] text-white/45 sm:text-[12px]">
                 Three Prison Terms · 10 Years Served · Ranking Member Of A
                 Prison Gang
               </p>

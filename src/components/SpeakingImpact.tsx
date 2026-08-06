@@ -50,7 +50,7 @@ export default function SpeakingImpact() {
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-3 sm:gap-6">
+          <div className="grid gap-8 md:grid-cols-3 md:gap-6">
             {features.map((feature) => (
               <div key={feature.title} className="flex items-start gap-3">
                 <AssetIcon src={feature.icon} alt={feature.alt} />
