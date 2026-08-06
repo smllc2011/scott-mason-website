@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-black">
-      <div className="container-site flex flex-col items-center justify-between gap-3 py-8 text-center sm:flex-row sm:text-left">
+      <div className="container-site flex flex-col items-center justify-between gap-2 py-4 text-center sm:flex-row sm:py-5 sm:text-left">
         <p className="text-[12px] text-white/50">
           © {new Date().getFullYear()} Scott Mason. All rights reserved.
         </p>

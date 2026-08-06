@@ -29,8 +29,8 @@ function isNavLinkActive(pathname: string, href: string) {
 
 function navLinkClassName(isActive: boolean, mobile = false) {
   const base = mobile
-    ? "block border-b border-white/10 px-6 py-4 text-[13px] font-semibold tracking-[0.12em] uppercase transition-colors"
-    : "whitespace-nowrap text-[10px] font-semibold tracking-[0.12em] uppercase transition-colors xl:text-[11px]";
+    ? "block border-b border-white/10 px-6 py-4 text-[14px] font-semibold tracking-[0.1em] uppercase transition-colors"
+    : "whitespace-nowrap text-[11px] font-semibold tracking-[0.1em] uppercase transition-colors lg:text-[12px] xl:text-[13px]";
 
   return `${base} ${isActive ? "text-accent" : "text-white hover:text-accent"}`;
 }

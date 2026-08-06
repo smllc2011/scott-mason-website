@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AnimateIn from "./AnimateIn";
 import ManagementContactForm from "./ManagementContactForm";
 
 type ContactCard = {
@@ -64,7 +65,7 @@ function ContactCardBlock({ contact }: { contact: ContactCard }) {
 export default function Management() {
   return (
     <section
-      className="relative section-padding pt-[calc(var(--site-header-height)+2.5rem)] lg:pt-[calc(var(--site-header-height)+3rem)]"
+      className="page-section relative"
       style={{
         backgroundColor: "#141414",
         backgroundImage:
@@ -74,11 +75,8 @@ export default function Management() {
       }}
     >
       <div className="container-site">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="heading-page text-white">
-            BOOKING · MANAGEMENT · MEDIA
-          </h1>
-          <p className="mt-5 text-left text-[15px] leading-[1.85] text-white/80 sm:text-[16px] sm:text-justify">
+        <AnimateIn className="mx-auto max-w-3xl text-center">
+          <p className="text-left text-[15px] leading-[1.85] text-white/80 sm:text-[16px] sm:text-justify">
             Scott speaks nationally to varied audiences including church
             events, middle schools, high schools, university forums, jails, and
             drug rehabilitation programs. Scott travels from John Glenn
@@ -87,16 +85,17 @@ export default function Management() {
             below and a representative of Scott&apos;s team will contact you as
             soon as possible.
           </p>
-        </div>
+        </AnimateIn>
 
-        <div className="mx-auto mt-12 grid max-w-4xl gap-8 sm:grid-cols-2 lg:mt-14">
+        <div className="animate-stagger mx-auto mt-12 grid max-w-4xl gap-8 sm:grid-cols-2 lg:mt-14">
           {contacts.map((contact) => (
             <ContactCardBlock key={contact.email} contact={contact} />
           ))}
         </div>
 
-        <div
+        <AnimateIn
           id="contact"
+          delay={2}
           className="mx-auto mt-14 max-w-2xl scroll-mt-[calc(var(--site-header-height)+1.5rem)] border border-white/10 bg-black/35 px-6 py-8 lg:mt-16 lg:px-10 lg:py-10"
         >
           <h2 className="font-[family-name:var(--font-display)] text-[1.5rem] leading-none tracking-wide text-white uppercase sm:text-[1.75rem]">
@@ -109,7 +108,7 @@ export default function Management() {
           <div className="mt-8">
             <ManagementContactForm />
           </div>
-        </div>
+        </AnimateIn>
       </div>
     </section>
   );

@@ -1,3 +1,5 @@
+import AnimateIn from "./AnimateIn";
+
 const socialLinks = [
   { label: "Facebook", href: "#" },
   { label: "Instagram", href: "#" },
@@ -8,7 +10,7 @@ const socialLinks = [
 export default function About() {
   return (
     <section
-      className="relative section-padding pt-[calc(var(--site-header-height)+2.5rem)] lg:pt-[calc(var(--site-header-height)+3rem)]"
+      className="page-section relative"
       style={{
         backgroundColor: "#141414",
         backgroundImage:
@@ -18,10 +20,8 @@ export default function About() {
       }}
     >
       <div className="container-site">
-        <div className="mx-auto max-w-3xl">
-          <h1 className="heading-page text-center text-white">ABOUT SCOTT</h1>
-
-          <div className="mt-8 space-y-6 text-[15px] leading-[1.85] text-white/80 sm:mt-10 sm:text-[16px] sm:leading-[1.9]">
+        <AnimateIn className="mx-auto max-w-3xl">
+          <div className="space-y-6 text-[15px] leading-[1.85] text-white/80 sm:text-[16px] sm:leading-[1.9]">
             <p>
               Scott was raised in a city that borders Detroit, Michigan. Scott
               was influenced early on by a mother who modeled perseverance,
@@ -90,7 +90,7 @@ export default function About() {
               </li>
             ))}
           </ul>
-        </div>
+        </AnimateIn>
       </div>
     </section>
   );

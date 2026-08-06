@@ -85,7 +85,7 @@ function GalleryCard({ item }: { item: GalleryItem }) {
 export default function PhotoGallery() {
   return (
     <section
-      className="relative section-padding pt-[calc(var(--site-header-height)+2.5rem)] lg:pt-[calc(var(--site-header-height)+3rem)]"
+      className="page-section--scroll relative"
       style={{
         backgroundColor: "#141414",
         backgroundImage:
@@ -95,15 +95,7 @@ export default function PhotoGallery() {
       }}
     >
       <div className="container-site">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="heading-page text-white">PHOTO GALLERY</h1>
-          <p className="mt-5 text-[15px] leading-[1.75] text-white/75 sm:text-[16px]">
-            From prison to purpose — images from Scott&apos;s journey and the
-            work he continues today.
-          </p>
-        </div>
-
-        <div className="mx-auto mt-14 grid max-w-5xl gap-8 sm:grid-cols-2 lg:mt-16 lg:gap-10">
+        <div className="animate-stagger mx-auto grid max-w-5xl gap-8 sm:grid-cols-2 lg:gap-10">
           {galleryItems.map((item) => (
             <GalleryCard key={item.src} item={item} />
           ))}

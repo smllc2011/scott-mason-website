@@ -127,7 +127,7 @@ function TestimonialCard({
 export default function Testimonials() {
   return (
     <section
-      className="relative section-padding pt-[calc(var(--site-header-height)+2.5rem)] lg:pt-[calc(var(--site-header-height)+3rem)]"
+      className="page-section--scroll relative"
       style={{
         backgroundColor: "#141414",
         backgroundImage:
@@ -137,15 +137,7 @@ export default function Testimonials() {
       }}
     >
       <div className="container-site">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="heading-page text-white">TESTIMONIALS</h1>
-          <p className="mt-5 text-[15px] leading-[1.75] text-white/75 sm:text-[16px]">
-            From educators to criminal justice professionals, Scott&apos;s story
-            and message leave a lasting impact on every audience.
-          </p>
-        </div>
-
-        <ul className="mx-auto mt-14 grid max-w-6xl gap-8 lg:mt-16 lg:grid-cols-2 lg:gap-10">
+        <ul className="animate-stagger mx-auto grid max-w-6xl gap-8 lg:grid-cols-2 lg:gap-10">
           {testimonials.map((testimonial) => (
             <TestimonialCard
               key={testimonial.author}

@@ -187,7 +187,7 @@ function ArticleBlock({ article }: { article: DrugMarchArticle }) {
 export default function DrugMarch() {
   return (
     <section
-      className="relative section-padding pt-[calc(var(--site-header-height)+2.5rem)] lg:pt-[calc(var(--site-header-height)+3rem)]"
+      className="page-section--scroll relative"
       style={{
         backgroundColor: "#141414",
         backgroundImage:
@@ -197,16 +197,7 @@ export default function DrugMarch() {
       }}
     >
       <div className="container-site">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="heading-page text-white">DRUG MARCH</h1>
-          <p className="mt-5 text-[15px] leading-[1.75] text-white/75 sm:text-[16px]">
-            Marion, Ohio rallies against addiction — bringing the community
-            together to send a message to drug dealers and give hope to
-            neighborhoods fighting back.
-          </p>
-        </div>
-
-        <div className="mx-auto mt-14 flex max-w-4xl flex-col gap-10 lg:mt-16 lg:gap-12">
+        <div className="animate-stagger mx-auto flex max-w-4xl flex-col gap-10 lg:gap-12">
           {articles.map((article) => (
             <ArticleBlock key={article.title} article={article} />
           ))}
