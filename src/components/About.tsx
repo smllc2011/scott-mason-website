@@ -28,8 +28,8 @@ export default function About() {
               addiction, anger, and instability, convinced there was no way out.
             </p>
 
-            <p className="border-l-2 border-[var(--color-accent)] py-1 pl-5 text-[17px] font-semibold leading-snug text-white sm:text-[18px]">
-              Until there was—
+            <p className="text-[17px] font-semibold leading-snug text-white sm:text-[18px]">
+              Until there was....
             </p>
 
             <p>
