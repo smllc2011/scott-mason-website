@@ -183,14 +183,17 @@ function ArticleBlock({ article }: { article: DrugMarchArticle }) {
 
             if (section.type === "image" && section.imageSrc) {
               return (
-                <figure key={`image-${index}`} className="overflow-hidden bg-black">
-                  <div className="relative aspect-[4/3] w-full sm:aspect-[3/2]">
+                <figure
+                  key={`image-${index}`}
+                  className="-mx-6 overflow-hidden bg-black lg:-mx-10"
+                >
+                  <div className="relative aspect-[16/9] w-full">
                     <Image
                       src={section.imageSrc}
                       alt={section.imageAlt ?? ""}
                       fill
                       unoptimized
-                      className="object-contain"
+                      className="object-cover object-top"
                       sizes="(max-width: 1024px) 100vw, 960px"
                     />
                   </div>
