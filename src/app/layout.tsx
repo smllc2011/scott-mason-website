@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -43,6 +44,7 @@ export default function RootLayout({
         className={`${inter.variable} ${bebasNeue.variable} bg-black antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
