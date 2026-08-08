@@ -68,13 +68,17 @@ export default function Header() {
           : "border-b border-transparent shadow-none"
       }`}
     >
-      <div className="container-site flex h-[var(--site-header-height)] items-center justify-between gap-3">
-        <Link href="/" className="shrink-0" aria-label="Scott Mason home">
+      <div className="container-site grid h-[var(--site-header-height)] grid-cols-[minmax(7.5rem,auto)_1fr_minmax(7.5rem,auto)] items-center gap-3 sm:grid-cols-[minmax(8.5rem,auto)_1fr_minmax(8.5rem,auto)] lg:grid-cols-[minmax(9.5rem,auto)_1fr_minmax(9.5rem,auto)]">
+        <Link
+          href="/"
+          className="flex shrink-0 items-center justify-self-start"
+          aria-label="Scott Mason home"
+        >
           <Logo />
         </Link>
 
         <nav
-          className="hidden min-w-0 flex-1 items-center justify-center gap-4 lg:flex xl:gap-6"
+          className="hidden min-w-0 items-center justify-center justify-self-center gap-4 lg:flex xl:gap-6"
           aria-label="Main navigation"
         >
           {navLinks.map((link) => (
@@ -90,7 +94,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+        <div className="flex shrink-0 items-center justify-end justify-self-end gap-2 sm:gap-3">
           <Link href="/contact" className="btn-nav hidden sm:inline-flex">
             BOOK SCOTT
           </Link>
