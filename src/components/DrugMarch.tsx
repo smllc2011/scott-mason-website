@@ -187,16 +187,15 @@ function ArticleBlock({ article }: { article: DrugMarchArticle }) {
                   key={`image-${index}`}
                   className="mx-auto w-full max-w-[88%] overflow-hidden bg-black sm:max-w-[82%]"
                 >
-                  <div className="relative aspect-[16/9] w-full">
-                    <Image
-                      src={section.imageSrc}
-                      alt={section.imageAlt ?? ""}
-                      fill
-                      unoptimized
-                      className="object-cover object-top"
-                      sizes="(max-width: 1024px) 100vw, 960px"
-                    />
-                  </div>
+                  <Image
+                    src={section.imageSrc}
+                    alt={section.imageAlt ?? ""}
+                    width={868}
+                    height={824}
+                    unoptimized
+                    className="h-auto w-full"
+                    sizes="(max-width: 1024px) 88vw, 720px"
+                  />
                 </figure>
               );
             }
