@@ -78,7 +78,7 @@ export default function Header() {
         </Link>
 
         <nav
-          className="hidden min-w-0 items-center justify-center justify-self-center gap-4 lg:flex xl:gap-6"
+          className="col-start-2 hidden min-w-0 items-center justify-center justify-self-center gap-4 lg:flex xl:gap-6"
           aria-label="Main navigation"
         >
           {navLinks.map((link) => (
@@ -94,7 +94,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex shrink-0 items-center justify-end justify-self-end gap-2 sm:gap-3">
+        <div className="col-start-3 flex shrink-0 items-center justify-end justify-self-end gap-2 sm:gap-3">
           <Link href="/contact" className="btn-nav hidden sm:inline-flex">
             BOOK SCOTT
           </Link>
