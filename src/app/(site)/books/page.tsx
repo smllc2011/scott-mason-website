@@ -4,7 +4,7 @@ import Books from "@/components/Books";
 export const metadata: Metadata = {
   title: "Scott's Books | Scott Mason",
   description:
-    "Order No Reason To Live, Beauty & Disgrace, and This Is What You Asked For — Scott Mason's raw, honest books on addiction, prison, and transformation.",
+    "Order No Reason To Live and This Is What You Asked For — Scott Mason's raw, honest books on addiction, prison, and transformation.",
   openGraph: {
     title: "Scott's Books | Scott Mason",
     description:

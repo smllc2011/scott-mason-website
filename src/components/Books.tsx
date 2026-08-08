@@ -18,14 +18,6 @@ const books = [
       "Scott's life once spiraled through addiction, prison, and despair—but his story didn't end there. From dropout to author, inmate to chaplain, addict to advocate, Scott's journey is a testament to radical transformation and the power of grace. Now on the front lines of a community devastated by the heroin epidemic, he brings hope, healing, and hard-won wisdom to those who feel forgotten. Honest, raw, and full of miracles, this is the story of a man redeemed—and determined to help others find redemption too.",
     orderUrl: "https://www.amazon.com/This-What-Asked-Scott-Mason/dp/B0FL2V359Q",
   },
-  {
-    title: "Beauty & Disgrace",
-    coverSrc: "/images/books/beauty-and-disgrace.jpg",
-    coverAlt: "Beauty & Disgrace by Lex Anderson and Scott Mason book cover",
-    description:
-      "There's not much that Lex Anderson and Scott Mason have in common, except their love for Christ and for this generation. In Beauty & Disgrace, you will get a glimpse into what life was like for each of them growing up. Lex grew up in a strong Christian home while Scott spent ten years in sixteen different prisons. Through their stories, you will see how God crafted together their lives—and how He brought them to one common goal: to help a broken world understand that they too have a God-written story waiting to unfold.",
-    orderUrl: "https://www.amazon.com/Beauty-Disgrace-Scott-Mason/dp/1466289635",
-  },
 ];
 
 function BookCover({
@@ -36,14 +28,14 @@ function BookCover({
   coverAlt: string;
 }) {
   return (
-    <div className="relative mx-auto aspect-[2/3] w-full max-w-[240px] overflow-hidden bg-black shadow-[0_20px_40px_rgba(0,0,0,0.45)] ring-1 ring-white/10 transition duration-300 group-hover:-translate-y-1 group-hover:scale-[1.015] group-hover:shadow-[0_28px_48px_rgba(0,0,0,0.55)] group-hover:ring-[var(--color-accent)]/45 sm:max-w-[260px]">
+    <div className="relative mx-auto aspect-[2/3] w-full max-w-[190px] overflow-hidden bg-black shadow-[0_20px_40px_rgba(0,0,0,0.45)] ring-1 ring-white/10 transition duration-300 group-hover:-translate-y-1 group-hover:scale-[1.015] group-hover:shadow-[0_28px_48px_rgba(0,0,0,0.55)] group-hover:ring-[var(--color-accent)]/45 sm:max-w-[260px]">
       <Image
         src={coverSrc}
         alt={coverAlt}
         fill
         unoptimized
         className="object-cover"
-        sizes="(max-width: 768px) 70vw, 260px"
+        sizes="(max-width: 640px) 190px, 260px"
       />
     </div>
   );
@@ -62,7 +54,7 @@ export default function Books() {
       }}
     >
       <div className="container-site">
-        <div className="grid items-stretch gap-8 md:grid-cols-2 xl:grid-cols-3 xl:gap-10">
+        <div className="grid items-stretch gap-8 md:grid-cols-2 md:max-w-4xl md:mx-auto xl:gap-10">
           {books.map((book) => (
             <article
               key={book.title}
