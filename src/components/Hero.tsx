@@ -64,12 +64,6 @@ export default function Hero() {
                 aria-hidden="true"
               />
 
-              <p className="max-w-xl text-left text-[15px] font-normal leading-[1.6] text-white/90 lg:text-[16px]">
-                They say I have to get your attention right from jump or
-                you&apos;ll move on to something else, and I can&apos;t have
-                that. So here you go.
-              </p>
-
               <div className="grid gap-4 sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:gap-x-6 lg:gap-y-4">
                 {stats.map((stat) => (
                   <div
