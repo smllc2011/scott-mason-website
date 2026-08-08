@@ -1,9 +1,11 @@
 import Image from "next/image";
 
 type ArticleSection = {
-  type: "paragraph" | "quote";
-  text: string;
+  type: "paragraph" | "quote" | "image";
+  text?: string;
   attribution?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 };
 
 type DrugMarchArticle = {
@@ -95,6 +97,12 @@ const articles: DrugMarchArticle[] = [
         attribution: "Dale Osborn, MCCC Warden",
       },
       {
+        type: "image",
+        imageSrc: "/images/drug-march/marion-star-rally-2014.png",
+        imageAlt:
+          "The Marion Star front page — Rally Against Drugs, September 22, 2014",
+      },
+      {
         type: "paragraph",
         text: "Mason said he has noticed more people get involved and has noticed the state and federal governments helping local law enforcement.",
       },
@@ -154,30 +162,51 @@ function ArticleBlock({ article }: { article: DrugMarchArticle }) {
         </header>
 
         <div className="mt-8 space-y-6">
-          {article.sections.map((section, index) =>
-            section.type === "quote" ? (
-              <blockquote
-                key={`${section.attribution}-${index}`}
-                className="border-l-2 border-[var(--color-accent)] pl-5"
-              >
-                <p className="text-[16px] leading-[1.85] text-white/90 italic sm:text-[17px]">
-                  &ldquo;{section.text}&rdquo;
-                </p>
-                {section.attribution ? (
-                  <footer className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em] text-white/50">
-                    {section.attribution}
-                  </footer>
-                ) : null}
-              </blockquote>
-            ) : (
+          {article.sections.map((section, index) => {
+            if (section.type === "quote") {
+              return (
+                <blockquote
+                  key={`${section.attribution}-${index}`}
+                  className="border-l-2 border-[var(--color-accent)] pl-5"
+                >
+                  <p className="text-[16px] leading-[1.85] text-white/90 italic sm:text-[17px]">
+                    &ldquo;{section.text}&rdquo;
+                  </p>
+                  {section.attribution ? (
+                    <footer className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em] text-white/50">
+                      {section.attribution}
+                    </footer>
+                  ) : null}
+                </blockquote>
+              );
+            }
+
+            if (section.type === "image" && section.imageSrc) {
+              return (
+                <figure key={`image-${index}`} className="overflow-hidden bg-black">
+                  <div className="relative aspect-[4/3] w-full sm:aspect-[3/2]">
+                    <Image
+                      src={section.imageSrc}
+                      alt={section.imageAlt ?? ""}
+                      fill
+                      unoptimized
+                      className="object-contain"
+                      sizes="(max-width: 1024px) 100vw, 960px"
+                    />
+                  </div>
+                </figure>
+              );
+            }
+
+            return (
               <p
                 key={index}
                 className="text-[15px] leading-[1.85] text-white/80 sm:text-[16px]"
               >
                 {section.text}
               </p>
-            ),
-          )}
+            );
+          })}
         </div>
       </div>
     </article>
@@ -201,22 +230,6 @@ export default function DrugMarch() {
           {articles.map((article) => (
             <ArticleBlock key={article.title} article={article} />
           ))}
-
-          <figure className="animate-in border border-white/10 bg-black/35 p-4 sm:p-6">
-            <div className="relative aspect-[4/3] w-full overflow-hidden bg-black sm:aspect-[3/2]">
-              <Image
-                src="/images/drug-march/marion-star-rally-2014.png"
-                alt="The Marion Star front page — Rally Against Drugs, September 22, 2014"
-                fill
-                unoptimized
-                className="object-contain"
-                sizes="(max-width: 1024px) 100vw, 960px"
-              />
-            </div>
-            <figcaption className="mt-4 text-center text-[12px] uppercase tracking-[0.08em] text-white/50">
-              The Marion Star · September 22, 2014 · Rally Against Drugs
-            </figcaption>
-          </figure>
         </div>
       </div>
     </section>
