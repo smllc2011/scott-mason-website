@@ -13,7 +13,6 @@ const navLinks = [
   { label: "SPEAKER", href: "/speaker" },
   { label: "TESTIMONIALS", href: "/testimonials" },
   { label: "DRUG MARCH", href: "/drug-march" },
-  { label: "PHOTO GALLERY", href: "/photo-gallery" },
   { label: "CONTACT", href: "/contact" },
 ];
 

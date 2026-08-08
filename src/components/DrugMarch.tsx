@@ -201,6 +201,22 @@ export default function DrugMarch() {
           {articles.map((article) => (
             <ArticleBlock key={article.title} article={article} />
           ))}
+
+          <figure className="animate-in border border-white/10 bg-black/35 p-4 sm:p-6">
+            <div className="relative aspect-[4/3] w-full overflow-hidden bg-black sm:aspect-[3/2]">
+              <Image
+                src="/images/drug-march/marion-star-rally-2014.png"
+                alt="The Marion Star front page — Rally Against Drugs, September 22, 2014"
+                fill
+                unoptimized
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 960px"
+              />
+            </div>
+            <figcaption className="mt-4 text-center text-[12px] uppercase tracking-[0.08em] text-white/50">
+              The Marion Star · September 22, 2014 · Rally Against Drugs
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
