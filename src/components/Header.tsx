@@ -38,6 +38,9 @@ export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const currentPageLabel =
+    navLinks.find((link) => isNavLinkActive(pathname, link.href))?.label ??
+    null;
 
   useEffect(() => {
     const onScroll = () => {
@@ -94,7 +97,13 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="col-start-3 flex shrink-0 items-center justify-end justify-self-end gap-2 sm:gap-3">
+        <div className="col-start-3 flex min-w-0 shrink-0 items-center justify-end justify-self-end gap-2.5 sm:gap-3">
+          {currentPageLabel ? (
+            <span className="truncate text-right text-[11px] font-semibold tracking-[0.12em] text-accent uppercase sm:text-[12px] lg:hidden">
+              {currentPageLabel}
+            </span>
+          ) : null}
+
           <Link href="/contact" className="btn-nav hidden sm:inline-flex">
             BOOK SCOTT
           </Link>
