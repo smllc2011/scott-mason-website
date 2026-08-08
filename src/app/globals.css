@@ -13,8 +13,9 @@
   --color-text-secondary: #cfcfcf;
   --color-text-muted: #9a9a9a;
   --color-text-dark: #1b1b1b;
-  --font-display: var(--font-bebas);
-  --font-body: var(--font-inter);
+  --font-serif: "Times New Roman", Times, serif;
+  --font-display: var(--font-serif);
+  --font-body: var(--font-serif);
   --site-header-height: 72px;
 }
 
@@ -25,7 +26,7 @@ html {
 }
 
 body {
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-body), Times, serif;
   background-color: #000;
   color: var(--color-text-primary);
   font-size: 16px;
@@ -61,7 +62,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display), Times, serif;
 }
 
 /* Primary CTA */
@@ -72,7 +73,7 @@ h4 {
   padding: 16px 32px;
   background-color: var(--color-accent);
   color: white;
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-body), Times, serif;
   font-weight: 600;
   font-size: 0.8125rem;
   letter-spacing: 0.05em;
@@ -259,7 +260,7 @@ h4 {
 }
 
 .heading-hero {
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display), Times, serif;
   font-size: clamp(1.5rem, 2.8vw + 0.35rem, 3.125rem);
   font-weight: 400;
   line-height: 1;
@@ -275,7 +276,7 @@ h4 {
 }
 
 .heading-section {
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display), Times, serif;
   font-size: clamp(2rem, 3vw + 0.5rem, 3rem);
   font-weight: 700;
   line-height: 1;

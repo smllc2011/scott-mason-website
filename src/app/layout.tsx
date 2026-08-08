@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
@@ -7,17 +6,6 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
 };
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const bebasNeue = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-bebas",
-});
 
 export const metadata: Metadata = {
   title: "Scott Mason | Speaker, Author & Advocate for Second Chances",
@@ -40,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-black">
-      <body
-        className={`${inter.variable} ${bebasNeue.variable} bg-black antialiased`}
-      >
+      <body className="bg-black antialiased">
         {children}
         <Analytics />
       </body>
