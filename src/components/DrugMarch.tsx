@@ -185,7 +185,7 @@ function ArticleBlock({ article }: { article: DrugMarchArticle }) {
               return (
                 <figure
                   key={`image-${index}`}
-                  className="-mx-6 overflow-hidden bg-black lg:-mx-10"
+                  className="mx-auto w-full max-w-[88%] overflow-hidden bg-black sm:max-w-[82%]"
                 >
                   <div className="relative aspect-[16/9] w-full">
                     <Image
