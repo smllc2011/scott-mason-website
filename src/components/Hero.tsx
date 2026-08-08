@@ -44,7 +44,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-l from-black/90 via-transparent to-transparent" />
       </div>
 
-      <div className="container-site relative grid items-center gap-5 pb-4 pt-[calc(var(--site-header-height)+1rem)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-10 lg:pb-5 lg:pt-[calc(var(--site-header-height)+1.25rem)] xl:gap-x-12">
+      <div className="container-site relative grid items-center gap-5 pb-4 pt-[calc(var(--site-header-height)+2rem)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-10 lg:pb-5 lg:pt-[calc(var(--site-header-height)+2.5rem)] xl:gap-x-12 xl:pt-[calc(var(--site-header-height)+3rem)]">
         <div className="min-w-0">
           <div className="relative max-w-full">
             <div

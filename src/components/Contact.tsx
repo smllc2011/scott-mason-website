@@ -1,16 +1,46 @@
 import AnimateIn from "./AnimateIn";
 import ContactForm from "./ContactForm";
 
-const carrie = {
-  name: "Carrie Mason",
-  role: "Business Manager",
-  phone: "1-740-802-1759",
-};
+const directContacts = [
+  {
+    name: "Carrie Mason",
+    role: "Business Manager",
+    phone: "1-740-802-1759",
+  },
+  {
+    name: "Scott Mason",
+    role: "Agent, Publicist, Speaker",
+    phone: "1-629-204-9018",
+  },
+];
+
+function DirectContactCard({
+  contact,
+}: {
+  contact: (typeof directContacts)[number];
+}) {
+  return (
+    <div className="flex flex-col items-center gap-2 py-1">
+      <p className="text-[16px] text-white/85">{contact.name}</p>
+      <div className="flex flex-col items-center gap-1">
+        <p className="text-center text-[13px] leading-snug uppercase tracking-[0.08em] text-[var(--color-accent)]">
+          {contact.role}
+        </p>
+        <a
+          href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}
+          className="text-[16px] text-white/85 transition-colors hover:text-[var(--color-accent)]"
+        >
+          {contact.phone}
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export default function Contact() {
   return (
     <section
-      className="page-section--scroll relative"
+      className="page-section--scroll relative !pb-6 sm:!pb-8 lg:!pb-10"
       style={{
         backgroundColor: "#141414",
         backgroundImage:
@@ -48,20 +78,15 @@ export default function Contact() {
           </div>
         </AnimateIn>
 
-        <AnimateIn delay={2} className="mx-auto mt-10 max-w-3xl text-center lg:mt-12">
+        <AnimateIn delay={2} className="mx-auto mt-6 max-w-3xl text-center lg:mt-8">
           <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-white/45">
             Prefer to call?
           </p>
-          <p className="mt-3 text-[16px] text-white/85">{carrie.name}</p>
-          <p className="mt-1 text-[13px] uppercase tracking-[0.08em] text-[var(--color-accent)]">
-            {carrie.role}
-          </p>
-          <a
-            href={`tel:${carrie.phone.replace(/[^\d+]/g, "")}`}
-            className="mt-4 inline-block text-[16px] text-white/85 transition-colors hover:text-[var(--color-accent)]"
-          >
-            {carrie.phone}
-          </a>
+          <div className="mt-3 grid items-start gap-8 sm:grid-cols-2 sm:gap-10">
+            {directContacts.map((contact) => (
+              <DirectContactCard key={contact.name} contact={contact} />
+            ))}
+          </div>
         </AnimateIn>
       </div>
     </section>
