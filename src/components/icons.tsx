@@ -232,11 +232,17 @@ export function FullscreenIcon({ className = "" }: { className?: string }) {
 
 export function MenuIcon({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+      focusable="false"
+    >
       <path
-        d="M4 7h16M4 12h16M4 17h16"
+        d="M5 7h14M5 12h14M5 17h14"
         stroke="currentColor"
-        strokeWidth="1.75"
+        strokeWidth="2"
         strokeLinecap="round"
       />
     </svg>
@@ -245,11 +251,17 @@ export function MenuIcon({ className = "" }: { className?: string }) {
 
 export function CloseIcon({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+      focusable="false"
+    >
       <path
-        d="m6 6 12 12M18 6 6 18"
+        d="m7 7 10 10M17 7 7 17"
         stroke="currentColor"
-        strokeWidth="1.75"
+        strokeWidth="2"
         strokeLinecap="round"
       />
     </svg>

@@ -101,16 +101,16 @@ export default function Header() {
 
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center border border-white/15 text-white transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] lg:hidden"
+            className="inline-flex size-10 shrink-0 items-center justify-center border border-white/20 text-white transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] sm:size-11 lg:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             onClick={() => setMenuOpen((open) => !open)}
           >
             {menuOpen ? (
-              <CloseIcon className="h-5 w-5" />
+              <CloseIcon className="block size-5" />
             ) : (
-              <MenuIcon className="h-5 w-5" />
+              <MenuIcon className="block size-5" />
             )}
           </button>
         </div>

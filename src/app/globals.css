@@ -66,50 +66,54 @@ h4 {
   font-family: var(--font-display), Times, serif;
 }
 
-/* Primary CTA */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 32px;
-  background-color: var(--color-accent);
-  color: white;
-  font-family: var(--font-body), Times, serif;
-  font-weight: 600;
-  font-size: 0.8125rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  border-radius: 0;
-  transition: background-color 200ms ease;
-}
+/* Primary CTA — @layer so utilities like `hidden` can override display */
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    background-color: var(--color-accent);
+    color: white;
+    font-family: var(--font-body), Times, serif;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-radius: 0;
+    transition: background-color 200ms ease;
+  }
 
-.btn-primary:hover {
-  background-color: var(--color-accent-hover);
-}
+  .btn-primary:hover {
+    background-color: var(--color-accent-hover);
+  }
 
-.btn-primary:active {
-  background-color: var(--color-accent-pressed);
-  transform: translateY(0);
-}
+  .btn-primary:active {
+    background-color: var(--color-accent-pressed);
+    transform: translateY(0);
+  }
 
-/* Compact nav CTA */
-.btn-nav {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 24px;
-  background-color: var(--color-accent);
-  color: white;
-  font-weight: 600;
-  font-size: 0.6875rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  border-radius: 0;
-  transition: background-color 200ms ease;
-}
+  /* Compact nav CTA */
+  .btn-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: var(--color-accent);
+    color: white;
+    font-weight: 600;
+    font-size: 0.6875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-radius: 0;
+    transition: background-color 200ms ease;
+  }
 
-.btn-nav:hover {
-  background-color: var(--color-accent-hover);
+  .btn-nav:hover {
+    background-color: var(--color-accent-hover);
+  }
 }
 
 .section-label {
