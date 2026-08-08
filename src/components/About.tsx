@@ -4,7 +4,7 @@ import { socialLinks } from "@/data/socialLinks";
 export default function About() {
   return (
     <section
-      className="page-section relative"
+      className="page-section relative !pb-6 sm:!pb-8 lg:!pb-10"
       style={{
         backgroundColor: "#141414",
         backgroundImage:
