@@ -87,7 +87,7 @@ export default function Hero() {
                 ))}
               </div>
 
-              <p className="max-w-xl text-left text-[11px] leading-relaxed tracking-[0.02em] text-white/45 sm:text-[12px]">
+              <p className="max-w-xl text-left text-[12px] font-medium leading-relaxed tracking-[0.04em] text-white/90 [text-shadow:0_1px_12px_rgba(0,0,0,0.85)] sm:text-[13px]">
                 Three Prison Terms · 10 Years Served · Ranking Member Of A
                 Prison Gang
               </p>
