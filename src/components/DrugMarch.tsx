@@ -135,14 +135,14 @@ const articles: DrugMarchArticle[] = [
 function ArticleBlock({ article }: { article: DrugMarchArticle }) {
   return (
     <article className="border border-white/10 bg-black/35">
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-black">
+      <div className="relative mx-auto aspect-[16/9] w-full max-w-xl overflow-hidden bg-black sm:max-w-2xl">
         <Image
           src={article.imageSrc}
           alt={article.imageAlt}
           fill
           unoptimized
           className="object-cover object-center"
-          sizes="(max-width: 1024px) 100vw, 960px"
+          sizes="(max-width: 640px) 100vw, 672px"
         />
       </div>
 
@@ -185,7 +185,7 @@ function ArticleBlock({ article }: { article: DrugMarchArticle }) {
               return (
                 <figure
                   key={`image-${index}`}
-                  className="mx-auto w-full max-w-[88%] overflow-hidden bg-black sm:max-w-[82%]"
+                  className="mx-auto w-full max-w-xs overflow-hidden bg-black sm:max-w-sm"
                 >
                   <Image
                     src={section.imageSrc}
@@ -194,7 +194,7 @@ function ArticleBlock({ article }: { article: DrugMarchArticle }) {
                     height={824}
                     unoptimized
                     className="h-auto w-full"
-                    sizes="(max-width: 1024px) 88vw, 720px"
+                    sizes="(max-width: 640px) 20rem, 24rem"
                   />
                 </figure>
               );
